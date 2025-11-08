@@ -33,7 +33,7 @@ Proyek ini dibangun menggunakan teknologi web dasar:
 
 Anda dapat mencoba aplikasi ini secara langsung melalui:
 
->[ **https://help.oanda.com/us/en/faqs/open-demo-account.htm** (Ganti dengan link demo jika ada, atau hapus bagian ini)](https://ipkcalculate.vercel.app/)
+https://ipkcalculate.vercel.app/
 
 ### 2. **Instalasi Lokal**
 
