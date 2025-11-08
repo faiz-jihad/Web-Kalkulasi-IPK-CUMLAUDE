@@ -5,154 +5,238 @@
   --muted: #6b7280;
   --bg: #f7fafc;
   --card: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #2563eb, #3b82f6);
+  --gradient-accent: linear-gradient(135deg, #10b981, #34d399);
 }
+
 * {
   box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   background: var(--bg);
   color: #0f172a;
 }
+
 header {
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: white;
-  padding: 14px 16px;
+  padding: 16px;
   text-align: center;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 .app {
   max-width: 1100px;
   margin: 20px auto;
   padding: 16px;
 }
+
 .row {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
+
 .col {
   background: var(--card);
   border-radius: 12px;
-  padding: 14px;
+  padding: 16px;
   box-shadow: 0 6px 18px rgba(14, 30, 37, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(14, 30, 37, 0.12);
+}
+
 .col.wide {
   flex: 2;
 }
+
 .col.narrow {
   flex: 1;
   min-width: 260px;
 }
+
 label {
   display: block;
   font-weight: 500;
   margin-bottom: 6px;
 }
+
 select,
 input,
-button,
-textarea {
-  font-family: inherit;
-}
-select,
-input[type="number"],
 textarea {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #e6edf3;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
 .controls {
   text-align: center;
   margin: 12px 0;
 }
+
 button {
-  padding: 10px 14px;
+  padding: 10px 16px;
   border-radius: 8px;
   border: 0;
   cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
 }
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .btn-primary {
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: white;
 }
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
 .btn-danger {
   background: var(--danger);
   color: white;
 }
+
+.btn-danger:hover {
+  background: #f87171;
+}
+
 .btn-muted {
   background: #94a3b8;
   color: white;
 }
+
 .semester {
   margin-bottom: 12px;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 12px;
   border: 1px solid #eef2ff;
+  transition: box-shadow 0.3s;
 }
+
+.semester:hover {
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.15);
+}
+
 .semester h4 {
   margin: 0 0 8px 0;
   color: var(--primary);
 }
+
 .row.inline {
   display: flex;
   gap: 8px;
 }
+
 .small {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
 .result-large {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--primary);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gradient-primary);
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .badge {
   display: inline-block;
-  padding: 6px 8px;
+  padding: 6px 10px;
   border-radius: 999px;
   background: #eef2ff;
   color: var(--primary);
   font-weight: 600;
+  transition: all 0.25s ease;
 }
+
+.badge:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
 canvas {
   width: 100% !important;
   height: 240px !important;
-  border-radius: 10px;
+  border-radius: 12px;
 }
+
 .insight {
   margin-top: 8px;
   font-size: 0.95rem;
   color: #0b1220;
 }
+
 .sim-row {
   display: flex;
   gap: 8px;
 }
+
 .sim-row input {
   width: 80px;
 }
+
 .chat-area textarea {
   height: 80px;
+  border-radius: 8px;
 }
+
 .muted {
   color: var(--muted);
   font-size: 0.92rem;
 }
+
 footer {
   margin: 18px 0;
   text-align: center;
   color: var(--muted);
   font-size: 0.9rem;
 }
+
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
   }
   .col.narrow {
     min-width: auto;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    font-size: 1.1rem;
+    padding: 12px;
   }
 }
