@@ -22,7 +22,7 @@ Aplikasi web sederhana untuk membantu mahasiswa menghitung **Indeks Prestasi Kum
 Proyek ini dibangun menggunakan teknologi web dasar:
 
 * **HTML:** Struktur dasar halaman web.
-* **CSS:** Styling dan tampilan (mungkin termasuk *framework* seperti Bootstrap/Tailwind jika digunakan).
+* **CSS:** Styling dan tampilan.
 * **JavaScript:** Logika perhitungan IPK dan interaktivitas.
 
 ---
