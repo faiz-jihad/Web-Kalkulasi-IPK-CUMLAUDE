@@ -1,0 +1,158 @@
+:root {
+  --primary: #2563eb;
+  --accent: #10b981;
+  --danger: #ef4444;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+  --card: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #0f172a;
+}
+header {
+  background: var(--primary);
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.app {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+}
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.col {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(14, 30, 37, 0.06);
+}
+.col.wide {
+  flex: 2;
+}
+.col.narrow {
+  flex: 1;
+  min-width: 260px;
+}
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+select,
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+select,
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+}
+.controls {
+  text-align: center;
+  margin: 12px 0;
+}
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+.btn-muted {
+  background: #94a3b8;
+  color: white;
+}
+.semester {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #eef2ff;
+}
+.semester h4 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+}
+.row.inline {
+  display: flex;
+  gap: 8px;
+}
+.small {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.result-large {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+.badge {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: var(--primary);
+  font-weight: 600;
+}
+canvas {
+  width: 100% !important;
+  height: 240px !important;
+  border-radius: 10px;
+}
+.insight {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #0b1220;
+}
+.sim-row {
+  display: flex;
+  gap: 8px;
+}
+.sim-row input {
+  width: 80px;
+}
+.chat-area textarea {
+  height: 80px;
+}
+.muted {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+footer {
+  margin: 18px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+  .col.narrow {
+    min-width: auto;
+  }
+}
