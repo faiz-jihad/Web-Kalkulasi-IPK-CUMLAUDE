@@ -1,4 +1,4 @@
-# 🎓 Smart IPK Dashboard (Corporate Edition)
+# 🎓 Smart IPK Dashboard
 
 [![GitHub license](https://img.shields.io/github/license/faiz-jihad/Web-Kalkulasi-IPK-CUMLAUDE)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/faiz-jihad/Web-Kalkulasi-IPK-CUMLAUDE)](https://github.com/faiz-jihad/Web-Kalkulasi-IPK-CUMLAUDE/stargazers)
